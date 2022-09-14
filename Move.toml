@@ -1,0 +1,11 @@
+[package]
+name = "hello-move"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/move-language/move.git", subdir = "language/move-stdlib", rev = "main" }
+MoveNursery = { git = "https://github.com/move-language/move.git", subdir = "language/move-stdlib/nursery", rev = "main" }
+
+[addresses]
+std =  "0x1"
+move_by_example = "0x1"
