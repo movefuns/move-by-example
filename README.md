@@ -1,5 +1,18 @@
 # Move by example
 
+## Directory description
+- basis
+- aptos
+- starcoin
+- sui
+- 0L
+
+basis it can run on all move public chains. 
+aptos,starcoin, sui, 0L ... can only run on its own chain
+
+
+
+
 
 ## Examples
 
