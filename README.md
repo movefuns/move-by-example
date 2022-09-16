@@ -1,4 +1,4 @@
-# Move by example
+# Move by Example
 
 ## Directory description
 - basis
