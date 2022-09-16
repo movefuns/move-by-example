@@ -1,3 +1,6 @@
+// Copyright (c) 2022, MoveFunsDAO.
+// SPDX-License-Identifier: Apache-2.0
+
 script {
     // Import the debug module published at the named account address std.
     // The address of std is defined in Move.toml `[addresses]` section.

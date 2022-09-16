@@ -1,3 +1,6 @@
+// Copyright (c) 2022, MoveFunsDAO.
+// SPDX-License-Identifier: Apache-2.0
+
 module move_by_example::first_module {
 
     // public function can be invoked by other modules and scripts
