@@ -3,4 +3,4 @@ authors = ["wsc"]
 language = "en"
 multilingual = false
 src = "src"
-title = "move-by-example"
+title = "Move By Example"
