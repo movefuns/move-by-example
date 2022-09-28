@@ -34,3 +34,5 @@
       <!-- - [Make a Character](./sui/samples/character.md) -->
 - [Aptos](aptos/README.md)
 - [0L](0L/README.md)
+- [Move Prover](prover/README.md)
+  - [Table of Contents](./prover/README.md)
