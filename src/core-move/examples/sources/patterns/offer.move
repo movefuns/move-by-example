@@ -38,19 +38,12 @@ module examples::offer {
         move_to<Offer<AdminCapability>>(sender, offer);
     }
 
-    /// The `sender` accept an offer object and save it in their account.
-    public fun accept_offer(sender: &signer, offer: Offer<AdminCapability>) {
-        let Offer<AdminCapability> { receipt, offer: admin_cap } = offer;
-        assert!(signer::address_of(sender) == receipt, ENotReceipt);
-        move_to<AdminCapability>(sender, admin_cap);
-    }
-
-    /// Entry function for `sender` to accept an offer from `grantor` and save it in their account.
-    public entry fun accept_role(sender: &signer, grantor: address)
+    /// Entry function for `receiptor` to accept an offer from `grantor` and save it in their account.
+    public entry fun accept_role(receiptor: &signer, grantor: address)
     acquires Offer {
         assert!(exists<Offer<AdminCapability>>(grantor), ENotGrantor);
         let Offer<AdminCapability> { receipt, offer: admin_cap } = move_from<Offer<AdminCapability>>(grantor);
-        assert!(receipt == signer::address_of(sender), ENotReceipt);
-        move_to<AdminCapability>(sender, admin_cap);
+        assert!(receipt == signer::address_of(receiptor), ENotReceipt);
+        move_to<AdminCapability>(receiptor, admin_cap);
     }
 }

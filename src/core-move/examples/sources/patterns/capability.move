@@ -9,18 +9,21 @@ module examples::capability {
 
     struct OwnerCapability has key, store {}
 
+    /// init and publish an OwnerCapability to the module owner.
     public entry fun init(sender: signer) {
         assert!(signer::address_of(&sender) == @examples, ENotPublisher);
         move_to(&sender, OwnerCapability {})
     }
 
-    public fun grant_role_with_capability(_to: address, _cap: &OwnerCapability) {
-        // grant role to address
+    /// mint to `_to` with the OwnerCapability.
+    public fun mint_with_capability(_amount: u64, _to: address, _cap: &OwnerCapability) {
+        // mint and deposit to `_to`
     }
 
-    public entry fun grant_role(sender: &signer, to: address) acquires OwnerCapability {
+    /// mint entry function. Only signer with OwnerCapability can call this function.
+    public entry fun mint(sender: &signer, to: address, amount: u64) acquires OwnerCapability {
         assert!(exists<OwnerCapability>(signer::address_of(sender)), ENotOwner);
         let cap = borrow_global<OwnerCapability>(signer::address_of(sender));
-        grant_role_with_capability(to, cap);
+        mint_with_capability(amount, to, cap);
     }
 }
