@@ -6,7 +6,7 @@ script {
     // The address of std is defined in Move.toml `[addresses]` section.
     use std::debug;
     use std::signer;
-    use move_by_example::first_module;
+    use examples::first_module;
 
     const ONE: u64 = 1;
 

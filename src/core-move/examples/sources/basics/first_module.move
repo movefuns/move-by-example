@@ -1,7 +1,7 @@
 // Copyright (c) 2022, MoveFunsDAO.
 // SPDX-License-Identifier: Apache-2.0
 
-module move_by_example::first_module {
+module examples::first_module {
 
     // public function can be invoked by other modules and scripts
     public fun add(x: u64, y: u64): u64 {

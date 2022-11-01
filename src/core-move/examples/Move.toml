@@ -5,7 +5,9 @@ version = "0.0.1"
 [dependencies]
 MoveStdlib = { git = "https://github.com/move-language/move.git", subdir = "language/move-stdlib", rev = "main" }
 MoveNursery = { git = "https://github.com/move-language/move.git", subdir = "language/move-stdlib/nursery", rev = "main" }
+MoveTableExtension = { git = "https://github.com/move-language/move.git", subdir = "language/extensions/move-table-extension", rev = "b2ca65b79fbb758d9386d9b4f521a8024e7d37d5" }
 
 [addresses]
-std =  "0x1"
-move_by_example = "0x1"
+std = "0x1"
+examples = "0xabc"
+extensions = "0x2"
